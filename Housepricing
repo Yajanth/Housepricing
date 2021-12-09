@@ -1,0 +1,33 @@
+import pandas as pd
+
+Filename="House pricing"
+Filepath=pd.read_csv("House Pricing.csv")
+
+Filepath.columns
+
+Data=Filepath.dropna(axis=0)
+
+Y=Data.Price
+Data_Features=['Rooms','Bathroom','Landsize','Car','BuildingArea']
+
+
+X=Data[Data_Features]
+
+
+from sklearn.tree import DecisionTreeClassifier
+
+Model=DecisionTreeClassifier(random_state=1)
+
+Model.fit(X,Y)
+print(X.head())
+
+print(Model.predict(X.head()))
+
+
+
+
+
+
+
+
+
