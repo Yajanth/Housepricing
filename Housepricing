@@ -10,7 +10,6 @@ Data=Filepath.dropna(axis=0)
 Y=Data.Price
 Data_Features=['Rooms','Bathroom','Landsize','Car','BuildingArea']
 
-
 X=Data[Data_Features]
 
 
